@@ -32,6 +32,8 @@
       "args": [
         "-g",
         "main.c",
+        "../credis-common/src/logger.c",
+        "-I../credis-common/include",
         "-o",
         "build/main"
       ],
@@ -53,6 +55,8 @@
       "args": [
         "-g",
         "main.c",
+        "../credis-common/src/logger.c",
+        "-I../credis-common/include",
         "-o",
         "build/main"
       ],
