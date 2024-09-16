@@ -1,0 +1,7 @@
+[submodule "credis-server"]
+	path = credis-server
+	url = git@github.com:cahyasetya/credis-server.git
+
+[submodule "credis-client"]
+	path = credis-client
+	url = git@github.com:cahyasetya/credis-client.git
