@@ -33,6 +33,9 @@
         "-g",
         "main.c",
         "../credis-common/src/logger.c",
+        "../credis-common/src/read.c",
+        "../credis-common/src/write.c",
+        "../credis-common/src/assert.c",
         "-I../credis-common/include",
         "-o",
         "build/main"
@@ -56,6 +59,9 @@
         "-g",
         "main.c",
         "../credis-common/src/logger.c",
+        "../credis-common/src/read.c",
+        "../credis-common/src/write.c",
+        "../credis-common/src/assert.c",
         "-I../credis-common/include",
         "-o",
         "build/main"
