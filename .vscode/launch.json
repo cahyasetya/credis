@@ -8,7 +8,7 @@
       "name": "Debug Server",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/credis-server/main",
+      "program": "${workspaceFolder}/credis-server/build/main",
       "args": [],
       "cwd": "${workspaceFolder}/credis-server",
       "preLaunchTask": "build server"
@@ -17,7 +17,7 @@
       "name": "Debug Client",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/credis-client/main",
+      "program": "${workspaceFolder}/credis-client/build/main",
       "args": [],
       "cwd": "${workspaceFolder}/credis-client",
       "preLaunchTask": "build client"

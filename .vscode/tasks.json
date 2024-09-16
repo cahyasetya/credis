@@ -3,13 +3,37 @@
   "tasks": [
     {
       "type": "shell",
+      "label": "create server build dir",
+      "command": "mkdir",
+      "args": [
+        "-p",
+        "build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/credis-server"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "create client build dir",
+      "command": "mkdir",
+      "args": [
+        "-p",
+        "build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/credis-client"
+      }
+    },
+    {
+      "type": "shell",
       "label": "build server",
       "command": "clang",
       "args": [
         "-g",
-        "${workspaceFolder}/credis-server/main.c",
+        "main.c",
         "-o",
-        "${workspaceFolder}/credis-server/main"
+        "build/main"
       ],
       "options": {
         "cwd": "${workspaceFolder}/credis-server"
@@ -17,7 +41,10 @@
       "problemMatcher": [
         "$gcc"
       ],
-      "group": "build"
+      "group": "build",
+      "dependsOn": [
+        "create server build dir"
+      ]
     },
     {
       "type": "shell",
@@ -25,9 +52,9 @@
       "command": "clang",
       "args": [
         "-g",
-        "${workspaceFolder}/credis-client/main.c",
+        "main.c",
         "-o",
-        "${workspaceFolder}/credis-client/main"
+        "build/main"
       ],
       "options": {
         "cwd": "${workspaceFolder}/credis-client"
@@ -35,7 +62,10 @@
       "problemMatcher": [
         "$gcc"
       ],
-      "group": "build"
+      "group": "build",
+      "dependsOn": [
+        "create client build dir"
+      ]
     }
   ]
 }
