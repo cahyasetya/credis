@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/credis-server/main",
+      "args": [],
+      "cwd": "${workspaceFolder}/credis-server",
+      "preLaunchTask": "build server"
+    },
+    {
+      "name": "Debug Client",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/credis-client/main",
+      "args": [],
+      "cwd": "${workspaceFolder}/credis-client",
+      "preLaunchTask": "build client"
+    }
+  ]
+}

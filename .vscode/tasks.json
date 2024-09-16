@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build server",
+      "command": "clang",
+      "args": [
+        "-g",
+        "${workspaceFolder}/credis-server/main.c",
+        "-o",
+        "${workspaceFolder}/credis-server/main"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/credis-server"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "build client",
+      "command": "clang",
+      "args": [
+        "-g",
+        "${workspaceFolder}/credis-client/main.c",
+        "-o",
+        "${workspaceFolder}/credis-client/main"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/credis-client"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    }
+  ]
+}
