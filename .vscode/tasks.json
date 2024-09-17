@@ -28,14 +28,15 @@
     {
       "type": "shell",
       "label": "build server",
-      "command": "clang",
+      "command": "clang++",
       "args": [
+        "-std=c++17",
         "-g",
-        "main.c",
-        "../credis-common/src/logger.c",
-        "../credis-common/src/read.c",
-        "../credis-common/src/write.c",
-        "../credis-common/src/assert.c",
+        "main.cpp",
+        "../credis-common/src/logger.cpp",
+        "../credis-common/src/read.cpp",
+        "../credis-common/src/write.cpp",
+        "../credis-common/src/assert.cpp",
         "-I../credis-common/include",
         "-o",
         "build/main"
@@ -54,17 +55,19 @@
     {
       "type": "shell",
       "label": "build client",
-      "command": "clang",
+      "command": "clang++",
       "args": [
+        "-std=c++17",
         "-g",
-        "main.c",
-        "../credis-common/src/logger.c",
-        "../credis-common/src/read.c",
-        "../credis-common/src/write.c",
-        "../credis-common/src/assert.c",
+        "main.cpp",
+        "../credis-common/src/logger.cpp",
+        "../credis-common/src/read.cpp",
+        "../credis-common/src/write.cpp",
+        "../credis-common/src/assert.cpp",
         "-I../credis-common/include",
         "-o",
-        "build/main"
+        "build/main",
+        "-lstdc++"  // Add this line to link against the C++ standard library
       ],
       "options": {
         "cwd": "${workspaceFolder}/credis-client"
